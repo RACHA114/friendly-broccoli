@@ -18,4 +18,8 @@ def filterSinogram(sinogram):
 def filterLine(projection):
 
     # votre code ici
-    
+    freq = np.fft.rfft(projection)
+    freq_filtrees = freq*np.abs(np.fft.rfftfreq(len(projection)))
+    ligne_filtree = np.fft.irfft(freq_filtrees)
+
+    return ligne_filtree
