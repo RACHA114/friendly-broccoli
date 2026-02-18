@@ -30,7 +30,7 @@ nbvox = 96 # options: 96, 192
 voxsize = 0.4 # option: 0.4, 0.2
 
 ## fichiers d'entrée
-dataDir = "./data/"
+dataDir = "data/"
 anglesFile = "angles.txt"
 sinogramFile = "sinogram-password.txt"
 
