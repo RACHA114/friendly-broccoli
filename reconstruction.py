@@ -15,7 +15,9 @@ import util as util
 import CTfilter as CTfilter
 
 ## créer l'ensemble de données d'entrée à partir des fichiers
-def readInput():
+def readInput(dir: str = geo.dataDir,
+              filename: str = geo.sinogramFile,
+              ):
     # lire les angles
     [nbprj, angles] = util.readAngles(geo.dataDir+geo.anglesFile)
 
@@ -53,7 +55,7 @@ def laminogram():
         for i in range(geo.nbvox): # lignes de l'image
             for a in range(len(angles)):
                 #votre code ici...
-                
+                pass
                 
     util.saveImage(image, "lam")
 
@@ -78,7 +80,7 @@ def backproject():
         for i in range(geo.nbvox): # lignes de l'image
             for a in range(len(angles)):
                 #votre code ici
-               
+                pass
     
     util.saveImage(image, "fbp")
 
