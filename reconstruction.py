@@ -16,8 +16,7 @@ import CTfiltre as CTfilter
 
 ## créer l'ensemble de données d'entrée à partir des fichiers
 def readInput(dir: str = geo.dataDir,
-              filename: str = filename,
-              ):
+              filename):
     # lire les angles
     [nbprj, angles] = util.readAngles(geo.dataDir+geo.anglesFile)
 
