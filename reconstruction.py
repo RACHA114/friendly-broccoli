@@ -8,8 +8,7 @@ import CTfiltre as CTfilter
 
 ## créer l'ensemble de données d'entrée à partir des fichiers
 def readInput(dir: str = geo.dataDir,
-              filename: str = geo.sinogramFile,
-              ):
+              filename = geo.sinogramFile):
     # lire les angles
     [nbprj, angles] = util.readAngles(geo.dataDir+geo.anglesFile)
 
@@ -18,7 +17,7 @@ def readInput(dir: str = geo.dataDir,
     print("["+str(np.min(angles))+", "+str(np.max(angles))+"]")
 
     # lire le sinogramme
-    [nbprj2, nbpix2, sinogram] = util.readSinogram(geo.dataDir+geo.sinogramFile)
+    [nbprj2, nbpix2, sinogram] = util.readSinogram(geo.dataDir+filename)
 
     if nbprj != nbprj2:
         print("angles file and sinogram file conflict, aborting!")
