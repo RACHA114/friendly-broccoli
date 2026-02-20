@@ -13,7 +13,7 @@ import numpy as np
 def filterSinogram(sinogram):
     for i in range(sinogram.shape[0]):
         sinogram[i] = filterLine(sinogram[i])
-
+    return sinogram
 ## filter une ligne (projection) via FFT
 def filterLine(projection):
 
